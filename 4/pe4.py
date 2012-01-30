@@ -2,10 +2,11 @@
 
 import math
 
-def make_palyndrome(l)
+def make_palyndrome(l):
 
+	pal = 0
 	for i, x in enumerate(l):
-		pal += 10**i * x + 10**(len(l)*2 -1)*x
+		pal += 10**i * x + 10**(len(l)*2 - i - 1)*x
 	return pal
 
 if __name__ == "__main__":
