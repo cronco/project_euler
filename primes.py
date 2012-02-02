@@ -28,8 +28,8 @@ def sieve(length = 2):
 	"""
 
 	sieve = []
-
 	power = 0
+
 	while len(sieve) < length:
 		for i in range(10**(power) + 1, 10**(power + 1)):
 			if not any(i % x == 0 for x in sieve):

@@ -7,7 +7,12 @@ from primes import sieve
 
 if __name__ == "__main__":
 	from timeit import Timer
-	x = int(sys.argv[1])
-	t = Timer("sieve(" x ")", "from __main__ import sieve")
+	try:
+		x = int(sys.argv[1])
+	
+	except:
+		x = 2
+	t = Timer("sieve("  + str(x) + ")", "from __main__ import sieve")
 	print(t.timeit(number = 10))
+	#print(sieve(x))
 	
