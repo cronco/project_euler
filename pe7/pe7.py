@@ -13,6 +13,6 @@ if __name__ == "__main__":
 	except:
 		x = 2
 	t = Timer("sieve("  + str(x) + ")", "from __main__ import sieve")
-	print(t.timeit(number = 10))
-	#print(sieve(x))
+	print(sieve(x))
+	print(t.timeit(number = 1))
 	
