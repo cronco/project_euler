@@ -32,7 +32,8 @@ def sieve(length = 2):
 
 	while len(sieve) < length:
 		for i in range(10**(power) + 1, 10**(power + 1)):
-			if not any(i % x == 0 for x in sieve):
+			root = int(math.sqrt(i))
+			if not any(i % x == 0 for x in sieve if x <= root):
 				sieve.append(i)
 				if len(sieve) == length: break
 		power += 1
